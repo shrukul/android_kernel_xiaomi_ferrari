@@ -1,0 +1,24 @@
+# Xiaomi configuration options
+
+config MACH_XIAOMI
+	bool "XIAOMI device"
+	depends on ARCH_MSM
+	help
+	  Support for Xiaomi products
+
+config MACH_XIAOMI_MSM8939
+	bool "XIAOMI MSM8939"
+	depends on ARCH_MSM
+	select MACH_XIAOMI
+	help
+	  Support for MSM8939 Xiaomi variants
+
+menu "Xiaomi board selection"
+
+	config MACH_XIAOMI_FERRARI
+		bool "XIAOMI_FERRARI board"
+		select MACH_XIAOMI_MSM8939
+		help
+		  Support for Xiaomi Mi 4i variant
+
+endmenu
