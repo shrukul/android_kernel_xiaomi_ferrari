@@ -31,6 +31,7 @@ ifeq ($(KERNEL_ROOT),)
 endif
 
 EXTRA_CFLAGS += -I$(M)
+ccflags-y += -I$(srctree)/drivers/misc/tspdrv
 
 obj-$(CONFIG_TSPDRV) += tspdrv.o
 

@@ -241,7 +241,9 @@ static void isa1000_vib_set_level(int level)
 	int duty;
 	static int last_level = 0;
 
+#if 0
 	pr_debug("%s: level = %d\n", __func__, level);
+#endif
 
 	if (level == last_level)
 		return;
@@ -484,7 +486,9 @@ VibeStatus ImmVibeSPI_ForceOut_SetSamples(VibeUInt8 nActuatorIndex, VibeUInt16 n
 		return VIBE_E_FAIL;
 	}
 
+#if 0
 	pr_debug("%s: level = %d\n", __func__, level);
+#endif
 
 	isa1000_vib_set_level( level);
 
